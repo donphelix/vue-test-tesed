@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(router); // Use the Vue Router instance
+app.use(store); // Use the Vuex store instance
+
+app.mount('#app');
